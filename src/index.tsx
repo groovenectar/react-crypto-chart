@@ -23,7 +23,7 @@ const TradeViewChart: React.FC<Props> = ({
     useState<CandleStickSocketData | null>(null);
 
   const fetchCandleData = useCallback(async () => {
-    const candleData = await fetchCandleStickData(pair);
+    const candleData = await fetchCandleStickData(pair, interval);
     setCandleData(candleData);
   }, [pair]);
 
